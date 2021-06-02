@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'nu.studer.jooq' version "5.2.1"
+}
+
+group 'org.aman'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    implementation 'org.jooq:jooq:3.15.00'
+    implementation 'org.jooq:jooq-meta:3.15.00'
+    implementation 'org.jooq:jooq-codegen:3.15.00'
+
+    runtime 'mysql:mysql-connector-java:8.0.21'
+}
+
+test {
+    useJUnitPlatform()
+}
